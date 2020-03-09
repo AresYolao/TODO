@@ -5,12 +5,16 @@ import { crearTodoHtml } from './js/componentes';
 // import { TodoList } from './clases/todo-list.class';
 
 export const todoList = new TodoList;
-const tarea = new Todo('Aprender javascript');
+// const tarea = new Todo('Aprender javascript');
 // const tarea2 = new Todo('Aprender React');
 
-todoList.nuevoTodo(tarea);
-tarea.completado = true;
+// todoList.nuevoTodo(tarea);
+// tarea.completado = true;
 // todoList.nuevoTodo(tarea2)
-console.log(todoList);
+// console.log(todoList);
 
-crearTodoHtml(tarea);
+// crearTodoHtml(tarea);
+
+todoList.todos.forEach(todo => crearTodoHtml(todo));
+
+console.log('Todos: ', todoList.todos);
